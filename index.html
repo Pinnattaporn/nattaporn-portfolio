@@ -58,6 +58,11 @@ dialog.lb::backdrop{background:var(--scrim)}
 .lb-close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));font:600 15px var(--body);padding:8px 16px;border-radius:999px;border:0;background:var(--surface);color:var(--ink);cursor:pointer}
 @media (prefers-reduced-motion:reduce){.zoom img{transition:none}}
 
+.shot{flex:1;display:block;min-height:0;overflow:hidden;background:var(--pine-soft)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block;transition:transform .2s}
+.shot:hover img{transform:scale(1.02)}
+.shot:focus-visible{outline:3px solid var(--pine);outline-offset:-3px}
+@media (prefers-reduced-motion:reduce){.shot img{transition:none}}
 .notes{min-width:0;display:grid;gap:14px}
 .num{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--pine)}
 .work h2{font-family:var(--display);font-weight:600;font-size:clamp(21px,2.6vw,26px);line-height:1.3;margin:0;text-wrap:balance}
@@ -78,7 +83,7 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:va
     <div class="eyebrow">Portfolio</div>
     <h1>นัฐพร ถิ่นเมาลี (ปิ่น)</h1>
     <p class="role">Web &amp; Multimedia Designer · นักศึกษาเทคโนโลยีสารสนเทศ</p>
-    <p class="lead">ออกแบบและพัฒนาเว็บไซต์ ออกแบบสื่อโฆษณา และตัดต่อวิดีโอ</p>
+    <p class="lead">ออกแบบและพัฒนาเว็บไซต์ ออกแบบสื่อโฆษณา ตัดต่อวิดีโอ และทำ Dashboard วิเคราะห์ข้อมูล</p>
     <ul class="chips" aria-label="ทักษะ">
       <li>Laravel · PHP · MySQL</li><li>HTML · CSS · JS</li><li>Figma</li><li>Photoshop · Illustrator · Canva</li><li>Premiere Pro · CapCut</li><li>Power BI · Excel</li>
     </ul>
@@ -136,6 +141,45 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:va
         </ul>
         <ul class="chips" aria-label="เครื่องมือ"><li>Canva</li><li>Photoshop</li></ul>
         <div class="actions"><button class="btn" type="button" data-open>ดูภาพขนาดใหญ่</button></div>
+      </div>
+    </article>
+    <article class="work">
+      <div class="visual">
+        <div class="bar"><i></i><i></i><i></i><span>asean-market-compass.html</span></div>
+        <a class="shot" href="asean-market-compass.html" target="_blank" rel="noopener" aria-label="เปิด Dashboard ASEAN Market Compass"><img src="assets/asean-market-compass.jpg" alt="หน้าจอ Dashboard ASEAN Market Compass แสดงอันดับ GDP และแนวโน้ม GDP ของประเทศอาเซียน" loading="lazy"></a>
+      </div>
+      <div class="notes">
+        <div class="num">04 · Data Dashboard</div>
+        <h2>ASEAN Market Compass: ควรขยายธุรกิจไปตลาดอาเซียนประเทศไหนก่อน</h2>
+        <p class="type">Dashboard แบบโต้ตอบ วิเคราะห์ข้อมูลเศรษฐกิจ 10 ประเทศอาเซียน ปี 2010–2024 จาก World Bank</p>
+        <ul class="points">
+          <li>ดึงข้อมูลจาก World Bank API ได้ 10 ตัวชี้วัด × 10 ประเทศ × 15 ปี รวม 1,500 ค่า เช่น GDP ประชากร เงินเฟ้อ ผู้ใช้อินเทอร์เน็ต และ FDI</li>
+          <li>ทำคะแนนความน่าสนใจของตลาด (0–100) จาก 6 มิติ ได้แก่ ขนาดตลาด กำลังซื้อ การเติบโต ดิจิทัล เสถียรภาพ และการลงทุน โดยผู้ใช้ปรับน้ำหนักเองได้ตามกลยุทธ์</li>
+          <li>เลือกปี ประเทศ และตัวชี้วัดได้ มีกราฟอันดับ กราฟแนวโน้ม Bubble chart กำลังซื้อเทียบการเติบโต และตารางข้อมูล</li>
+          <li>สรุปข้อเสนอแนะ: เริ่มที่เวียดนามซึ่งโตเร็วที่สุด (เฉลี่ย 5.2% ต่อปี) แล้วขยายต่อไปอินโดนีเซียซึ่งเป็นตลาดใหญ่ที่สุด</li>
+        </ul>
+        <ul class="chips" aria-label="เครื่องมือ"><li>World Bank API</li><li>Data Cleaning</li><li>Chart.js</li><li>HTML/CSS/JS</li></ul>
+        <div class="actions"><a class="btn" href="asean-market-compass.html" target="_blank" rel="noopener">เปิด Dashboard ↗</a></div>
+      </div>
+    </article>
+
+    <article class="work">
+      <div class="visual">
+        <div class="bar"><i></i><i></i><i></i><span>seismic-watch-asia.html</span></div>
+        <a class="shot" href="seismic-watch-asia.html" target="_blank" rel="noopener" aria-label="เปิด Dashboard Seismic Watch Asia"><img src="assets/seismic-watch-asia.jpg" alt="หน้าจอ Dashboard Seismic Watch Asia แสดงตัวเลขสรุปแผ่นดินไหวและระดับการเฝ้าระวังแต่ละภูมิภาค" loading="lazy"></a>
+      </div>
+      <div class="notes">
+        <div class="num">05 · Data Dashboard</div>
+        <h2>Seismic Watch Asia: ไทยควรเตรียมรับมือแผ่นดินไหวจากภูมิภาคไหน</h2>
+        <p class="type">Dashboard แบบโต้ตอบ วิเคราะห์แผ่นดินไหวขนาด M4.5 ขึ้นไปทั่วโลก 20,450 ครั้ง (ม.ค. 2024 – ก.ย. 2026) จาก USGS</p>
+        <ul class="points">
+          <li>ดึงข้อมูลจาก USGS Earthquake API แล้วเตรียมข้อมูลด้วย Python ตัดข้อมูลที่ไม่ใช่แผ่นดินไหวออก และจัดกลุ่มเป็น 12 ภูมิภาคจากพิกัด</li>
+          <li>คำนวณระยะทางจากกรุงเทพฯ ด้วยสูตร Haversine เพื่อดูเหตุการณ์ในรัศมี 1,500 กม. และสร้างดัชนีเฝ้าระวัง (Watch Level) 0–100 จาก 4 ปัจจัย</li>
+          <li>มีแผนที่จุดเกิดเหตุ กราฟแนวโน้มรายเดือน ฮิสโตแกรมขนาด กราฟอันดับภูมิภาค Scatter plot ความลึกเทียบขนาด และตัวกรองที่อัปเดตทุกกราฟพร้อมกัน</li>
+          <li>สรุปข้อเสนอแนะ: ให้ความสำคัญกับแนวรอยเลื่อนสะกาย–อันดามัน–สุมาตราทางตะวันตกของไทยก่อน (เช่น เหตุการณ์ M7.7 ที่มัณฑะเลย์ ปี 2025)</li>
+        </ul>
+        <ul class="chips" aria-label="เครื่องมือ"><li>USGS API</li><li>Python</li><li>Apache ECharts</li><li>HTML/CSS/JS</li></ul>
+        <div class="actions"><a class="btn" href="seismic-watch-asia.html" target="_blank" rel="noopener">เปิด Dashboard ↗</a></div>
       </div>
     </article>
   </main>
