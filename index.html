@@ -33,6 +33,11 @@ h1{font-family:var(--display);font-weight:700;font-size:clamp(32px,5.5vw,48px);l
 .role{font-family:var(--display);font-weight:500;font-size:clamp(17px,2.4vw,21px);color:var(--muted);margin:0}
 .lead{max-width:60ch;color:var(--muted);margin:0}
 
+.focus{display:grid;gap:10px;max-width:68ch;margin-top:6px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.focus h2{font-family:var(--display);font-weight:600;font-size:18px;line-height:1.3;margin:0}
+.focus p{margin:0;color:var(--muted);font-size:15px}
+.focus ol{margin:0;padding-left:1.3em;display:grid;gap:4px;font-size:15px}
+.focus b{font-weight:600}
 .chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
 .chips li{font-size:13px;line-height:1.5;padding:3px 10px;border-radius:999px;background:var(--pine-soft)}
 
@@ -83,9 +88,20 @@ footer{padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:va
     <div class="eyebrow">Portfolio</div>
     <h1>นัฐพร ถิ่นเมาลี (ปิ่น)</h1>
     <p class="role">Web &amp; Multimedia Designer · นักศึกษาเทคโนโลยีสารสนเทศ</p>
-    <p class="lead">ออกแบบและพัฒนาเว็บไซต์ ออกแบบสื่อโฆษณา ตัดต่อวิดีโอ และทำ Dashboard วิเคราะห์ข้อมูล</p>
+    <p class="lead">ออกแบบและพัฒนาเว็บไซต์ ออกแบบสื่อโฆษณา ตัดต่อวิดีโอ และวิเคราะห์ข้อมูล</p>
+    <section class="focus" aria-labelledby="data-h">
+      <h2 id="data-h">งานด้าน Data</h2>
+      <p>ทำงานข้อมูลตั้งแต่ตั้งโจทย์จนได้ข้อเสนอแนะที่นำไปตัดสินใจได้จริง ทั้งในโปรเจกต์มหาวิทยาลัย โปรเจกต์ส่วนตัว และงานติดตามยอดจองกับผลโฆษณาของ Love Tree Camp</p>
+      <ol>
+        <li><b>ตั้งคำถาม</b> กำหนดโจทย์ที่ต้องการตอบ เช่น ควรขยายตลาดไปประเทศไหน หรือควรเฝ้าระวังภูมิภาคใด</li>
+        <li><b>รวบรวมข้อมูล</b> ดึงข้อมูลจากแหล่งที่เชื่อถือได้ผ่าน API เช่น World Bank และ USGS หรือจากระบบที่พัฒนาเอง</li>
+        <li><b>เตรียมข้อมูล</b> ทำความสะอาด จัดรูปแบบ และคำนวณตัวชี้วัดด้วย Excel และ Python</li>
+        <li><b>สร้าง Dashboard</b> ออกแบบกราฟและตัวกรองให้อ่านง่าย ด้วย Power BI, Looker Studio, Tableau หรือเขียนเว็บเอง</li>
+        <li><b>สรุปผล</b> เขียนข้อค้นพบและข้อเสนอแนะ พร้อมระบุแหล่งข้อมูลและข้อจำกัด</li>
+      </ol>
+    </section>
     <ul class="chips" aria-label="ทักษะ">
-      <li>Laravel · PHP · MySQL</li><li>HTML · CSS · JS</li><li>Figma</li><li>Photoshop · Illustrator · Canva</li><li>Premiere Pro · CapCut</li><li>Power BI · Excel</li>
+      <li>Laravel · PHP · MySQL</li><li>HTML · CSS · JS</li><li>Figma</li><li>Photoshop · Illustrator · Canva</li><li>Premiere Pro · CapCut</li><li>Excel · Power BI · Looker Studio · Tableau</li><li>Python</li><li>Facebook · TikTok Ads</li>
     </ul>
   </header>
 
